@@ -1,0 +1,492 @@
+.body{
+	background: #f9f9f9;
+}
+.content{
+	width: 1100px;
+}
+.top-1,.head,.nav,.goodslink,.goodsimg,.goodsmain,.otherlike,.footer{
+	min-width: 1100px;
+}
+#mylist{
+	left:684px;
+}
+.headnews{
+	height: 0px;
+}
+
+.goodslink{
+	width: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+.goodslink a{
+	float: left;
+	padding: 10px 5px;
+	color: #333;
+}
+.goodslink a:nth-child(1){
+	background: url(../images/images2/picon.png) no-repeat 0 10px;
+	padding-left: 20px;
+}
+.goodslink a:hover{
+	color: #FF9000;
+}
+/*******************goodslink*****************/
+.goodsimg{
+	background: #fff;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+.goodsimg .content{
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+}
+.goodsimg .goodsimg-l{
+	overflow: hidden;
+	float: left;
+	width: 500px;
+}
+.goodsimg .goodsimg-l dt{
+	width: 498px;
+	height: 498px;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.goodsimg dt img{
+	width: 498px;
+	height: 498px;
+}
+#smallArea {
+ 	display: none; 
+ 	width: 100px; height: 100px; 
+ 	background: rgba(200, 222,111, 0.3); 
+ 	position: absolute; 
+ 	left: 0px; 
+ 	top: 0;
+}
+.goodsimg dd {
+	float: left;
+}
+.goodsimg dd img{
+	float: left;
+	margin: 10px;
+	border: 1px solid #ccc;
+}
+.goodsimg .goodsimg-r{
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+	width: 450px;
+}
+.goodsimg-r h1{
+	font-size: 18px;
+	font-weight: 600;
+}
+.goodsimg-r h1 a{
+	color: #333;
+}
+.goodsimg-r h1 a:hover{
+	color: #FF9000;
+}
+.goodsimg-r .goodsimg-r-1,.goodsimg-r-2{
+	width: 450px;
+	overflow: hidden;
+	border-bottom: 1px dotted #ccc;
+	margin: 10px 5px;
+}
+
+.goodsimg-r dl{
+	margin: 20px 0;
+	width: 100%;
+	overflow: hidden;
+}
+.goodsimg-r dl dt{
+	float: left;
+	margin-right: 30px;
+	width: 100px;
+}
+.goodsimg-r dl:nth-child(1) dd{
+	font-size: 18px;
+	font-weight: 600;
+	color: #FF9000;
+}
+.goodsimg-r dl:nth-child(2){
+	border-bottom: 1px dotted #ccc;
+}
+.goodsimg-r dl .border{
+	border:2px solid #FF9000;
+	padding: 3px 6px;
+}
+.goodsimg-r dl .number span{
+	text-align: center;
+	float: left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border:1px solid #ccc;
+	cursor: pointer;
+}
+#add,#del,.add,.del{
+	text-align: center;
+	float: left;
+	display: block;
+	width: 20px;
+	height: 22px;
+	border:1px solid #ccc;
+	cursor: pointer;
+}
+.goodsimg-r dl .number span:nth-child(2),#number{
+	width: 50px;
+}
+
+.goodsimg-r .goodsimg-r-2 {
+	border:none;
+	margin-top: 25px;
+}
+.goodsimg-r .goodsimg-r-2 input{
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	background: #f06129;
+	margin-right: 20px;
+	font-size: 16px;
+	color: #fff;
+}
+.goodsimg-r .goodsimg-r-2 input:nth-child(2){
+	
+	background: #FFFFFF;
+	color: #FF9000;
+	border:1px solid #FF9000
+}
+.goodsimg-r-2 h5{
+	color: #ff0000;
+	margin-bottom: 10px;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+#warn,.warn-1{
+	display: none;
+}
+
+#bigArea{
+	border: 1px solid #ccc;
+	width: 500px;
+	height:500px;
+	overflow: hidden;
+	position: absolute;
+	left: 510px;
+	display: none;
+}
+#bigImg {
+	width: 1200px;
+	height: 1200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/****************************************goodsimg*********************************/
+.goodsmain{
+	padding-top: 30px;
+	background: #f9f9f9;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+.goodsintor{
+	float: left;
+	width: 80%;
+	overflow: hidden;
+	background: #fff;
+}
+.goodsintor .goodsintor-top{
+	width: 880px;
+	height: 30px;
+	border-bottom: 2px solid #FF9000;
+	background: #fff;
+}
+.goodsintor-top ul{
+	height: 30px;
+	width: 532px;
+	float: left;
+	overflow: hidden;
+}
+.goodsintor-top li{
+	width: 130px;
+	height: 30px;
+	float: left;
+	margin-right: 3px;
+	line-height: 30px;
+	text-align: center;
+	background: #d9d9d9;
+}
+.goodsintor-top li a{
+	font-size: 14px;
+	color: #666;
+}
+
+.goodsintor-top .goodsintor-top-2{
+	background: #fff;
+	position: relative;
+	width:150px;
+	padding: 0 20px;
+	margin-left: -3px;
+	float: left;
+	
+}
+.goodsintor-top .goodsintor-top-2 p{
+	background: #fff;
+	position: absolute;
+	left: 0;
+	top:30px;
+	border:1px solid #ccc;
+	padding: 20px;
+	z-index: 1;
+	border-top: none;
+	display: none;
+}
+
+.goodsintor-top .goodsintor-top-2 span{
+	width: 19px;
+	height: 30px;
+	background: url(../images/images2/mob.jpg) no-repeat 5px 5px;
+	float: left;
+}
+
+.goodsintor-top .goodsintor-top-2 span:nth-child(2){
+	width: 90px;
+	height: 30px;
+	background: none;
+	line-height: 30px;
+}
+.goodsintor-top .goodsintor-top-2  span:nth-child(3){
+	background: url(../images/images2/mob.jpg) no-repeat -28px -6px;
+}
+
+.goodsintor-top .goodsintor-top-2 :hover span:nth-child(2){
+	color: #333333;
+}
+
+.goodsintor-top-2:hover span:nth-child(1){
+	background: url(../images/images2/mob.jpg) no-repeat -13px 5px;
+}
+
+.goodsintor-top-2:hover span:nth-child(3){
+	background: url(../images/images2/mob.jpg) no-repeat -28px 12px;
+}
+.goodsintor-top-2:hover {
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.goodsintor-top-2:hover p {
+	display: block;
+}
+/******************************.goodsintor-top************************/
+.goodsintor-2,.goodsintor-3 li,.goodsintor-4{
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.goodsintor-2 img,.goodsintor-3 img{
+	display: block;
+	width:100%;
+	border: none;
+}
+.goodsintor-4{
+	width: 98%;
+	height: 150px;
+	border: 1px solid #ccc;
+	padding: 10;
+	margin: 10px;
+	overflow: hidden;
+	
+}
+.goodsintor-4 a{
+	float: left;
+	display: block;
+	height: 88px;
+	width: 20%;
+}
+.goodsintor-4 p{
+	float: right;
+	width:75%
+}
+
+
+
+/*************************************详情图*************************/
+.goodsintor-5 span{
+	margin-bottom: 20px;
+	display: inline-block;
+	height: 40px;
+	background: #FF9000;
+	width: 7%;
+	border-radius: 0 10px 10px 0;
+}
+.goodsintor-5 h2{
+	margin-bottom: 20px;
+	float: right;
+	height: 40px;
+	background: #ffd2c1;
+	width: 92%;
+	border-radius: 10px 0 0 10px;
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 40px;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+
+.goodsintor-5-txt dl{
+	width: 95%;
+	overflow: hidden;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border-bottom: 1px dashed #ccc;
+}
+
+.goodsintor-5-txt dl:nth-child(8){
+	
+	border-bottom: none;
+}
+
+.goodsintor-5-txt dl dt{
+	font-size: 20px;
+	color: #FF9000;
+}
+.goodsintor-5-txt dl dt i{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #ffd2c1;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 10px;
+}
+.goodsintor-5-txt dl dd{
+	margin-left: 40px;
+}
+
+
+
+
+
+.othergoods{
+	width: 19%;
+	overflow: hidden;
+	float: right;
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+} 
+
+.othergoods h1{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #ff9000;
+	text-align: center;
+	line-height: 30px;
+	background: #fff;
+}
+
+
+.othergoods li{
+	border-bottom:1px dashed #CCC;
+}
+.othergoods ul,.othergoods li,.hotgoods{
+	overflow: hidden;
+	width: 99.5%;
+	padding: 10px 0;
+	background: #fff;
+}
+
+.othergoods .lastli{
+	border-bottom:none;
+}
+.othergoods ul li div{
+	float: left;
+}
+.othergoods ul li .left{
+	width: 40%;
+}
+.othergoods ul li .left img{
+	width: 100%;
+}
+.othergoods ul li .right{
+	width: 60%;
+}
+.othergoods ul li .right h3{
+	padding-top: 10px;
+}
+.othergoods .hotgoods{
+	padding: 5px;
+	box-sizing: border-box;
+}
+.othergoods .hotgoods a{
+	color: #666;
+	padding-right:4px;
+}
+.othergoods .hotgoods a:hover{
+	color: #FF9000;
+}
+/************************************goodsmain***************************/
+.otherlike{
+	overflow: hidden;
+	width: 100%;
+	background: #f9f9f9;
+	padding-bottom: 30px;
+}
+.otherlike-main{
+	margin-left: 80px;
+	background: #fff;
+	width: 100%;
+	overflow: hidden;
+	border-top: 2px solid #ccc;
+	padding-bottom: 10px;
+}
+.otherlike-main ul{
+	overflow: hidden;
+}
+.otherlike-main li{
+	width: 14.5%;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0 5px;
+	float:left;
+	margin-right: 10px;
+}
+.otherlike-main li img{
+	width: 100%;
+}
+.otherlike-main li h2,.otherlike-main li h3{
+	width: 100%;
+	margin: 10px 0;
+	line-height: 20px;
+}
+.otherlike-main li h2 a,.othergoods .right a{
+	color: #666;
+}
+.otherlike-main li h2 a:hover,.othergoods .right a:hover{
+	color: #ff9000;
+}
+.otherlike-main li h3 span,.othergoods .right span{
+	float: left;
+	color: #333;
+}
+.otherlike-main li h3 i,.othergoods .right i{
+	float: left;
+	color: #333;
+	font-weight: 600;
+	font-size: 16px;
+}
+.otherlike-main li h3 em{
+	float: right
+}
+/*************************otherlike*********************/
+.footercenter .footercenter-r{
+	width: 370px;
+}

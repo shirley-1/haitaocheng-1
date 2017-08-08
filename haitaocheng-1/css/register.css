@@ -1,0 +1,141 @@
+.content{
+	width: 983px;
+	margin: auto;
+}
+html,body{
+	background:#f9f9f9;
+}
+/*******************通用****************/
+.top{
+	height: 100px;
+	border-bottom: 2px solid #333;
+	background:#f9f9f9;
+	line-height: 100px;
+}
+.top .top-left{
+	float: left;
+	height: 100%
+	width: 200px;
+}
+.top .top-left a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.top .top-right{
+	float: right;
+	height: 72px;
+	width: 230px;
+	background: url(../images/logo2.png) no-repeat;
+	margin-top: 20px;
+}
+/**************************top************************/
+
+.main{
+	width: 100%;
+	overflow: hidden;
+	padding-top: 30px;
+	background:#f9f9f9;
+}
+.main .main-left{
+	float: left;
+	height: 400px;
+	width: 500px;
+}
+.main .main-left a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.main .main-right{
+	float: right;
+	width: 430px;
+	overflow:hidden;
+}
+.main-right .main-right-1{
+	height: 30px;
+	line-height: 30px;
+}
+.main-right-1 h2{
+	color: #ff6600;
+	font-size: 18px;
+	float: left;
+}
+.main-right-1 h3{
+	float: right;
+}
+.main-right-1 a{
+	color: #ff6600;
+}
+.main-right-2{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 15px;
+	text-align: center;
+	padding: 15px;
+}
+.erro h1,.ipt1,.ipt2,.ipt3,.yanzhengma,.ipt6{
+	width: 338px;
+	height: 46px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	padding-left: 30px;
+}
+.erro{
+	width: 340px;
+	height: 40px;
+	margin: 10px auto;
+}
+.erro h1{
+	background: #fff0f0 url(../images/images3/erro.png) no-repeat 5px 10px;
+	border:1px solid #ff5555;
+	height: 38px;
+	line-height: 38px;
+	text-align: left;
+	display: none;
+}
+.yanzhengma{
+	margin: 0 auto;
+	height: 80px;
+	border: none;
+	padding-left: 0;
+}
+.ipt1{
+	background: url(../images/images3/name.png) no-repeat 5px 15px;
+}
+.ipt2,.ipt3{
+	background: url(../images/images3/pwd.png) no-repeat 5px 12px;
+}
+.ipt4{
+	width: 134px;
+	height: 46px;
+	border: 1px solid #ccc;
+	padding-left: 20px;
+	float: left;
+}
+.ipt5{
+	width: 115px;
+	height: 46px;
+	background: #FF9000;
+	border: 1px solid #ccc;
+	margin-left: 20px;
+	font-size: 24px;
+	color: #FFFFFF;
+	border: none;
+	float: left;
+	margin-right: 5px;
+}
+.main-right-2 span{
+	display: inline-block;
+}
+.ipt6{
+	background: #FF9000;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	padding-left: 0;
+}

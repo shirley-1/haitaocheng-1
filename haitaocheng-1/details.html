@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="css/style2.css" />
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/move.js"></script>
+		<script	src="js/all.js"></script>
+		<script	src="js/display.js"></script>
+		<script src="js/fangdajing.js"></script>
+		<script src="js/goodsintor.js"></script>
+		<script src="js/details-goods.js"></script>
+		<script src="js/jquery.fly.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/loadCart.js"></script>
+		<script type="text/javascript">
+			onload=function(){
+				goodsintor();
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<div class="top-1">
+			<div class="content">
+				<ul class="left">
+					<li>hi,欢迎来到海淘橙</li>
+					<li><a href="login.html">[登录]</a></li>
+					<li><a href="register.html">[注册]</a></li>
+					<li class="left-4">注册有礼</li>
+				</ul>
+				<ul class="right">
+					<li class="right-1">
+						<a href="#">我的海淘</a>
+					</li>
+					<li class="right-2"><a href="#">购物车<span>0</span>件</a></li>
+					<li class="right-3"><a href="#">订阅关注</a></li>
+					<li class="right-4"><a href="#">帮助中心</a></li>
+					<li class="right-5"><a href="#">网站导航</a></li>
+					<li class="right-6"><a href="#">收藏海淘</a></li>
+					<li class="right-7">Ctrl+D</li>
+				</ul>
+				
+				<div class="top-1-weixin">
+				
+					<div class="top-1-weixin-1">
+						<ul>
+							<li><img src="images/emw1.png"/></li>
+							<li>微信订阅号</li>
+						</ul>
+						<ul>
+							<li><img src="images/ewm2.png"/></li>
+							<li>微信服务</li>
+						</ul>
+					</div>
+				
+				
+					<div class="top-1-weixin-2">
+						<h5>关注我们</h5>
+						<h6><span class="bg1"></span><span class="bg2"></span></h6>
+					</div>
+					
+					<div class="top-1-weixin-3">
+						<p>邮件订阅</p>
+						<input type="text" placeholder="请输入您的邮箱地址" class="ipt1"/>
+						<input type="submit" value="订阅" class="ipt2"/>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-------------------------------------top1----------------------------->
+		<div class="head">
+			<ul id="mylist">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">我的账户</a></li>
+				<li><a href="#">我的消息</a></li>
+				<li><a href="#">我的优惠券</a></li>
+			</ul>
+			<div class="content">
+				<a href="#" id="logo"></a>
+				<div class="center">
+					<div class="search">
+						<input type="text" id="text-search" placeholder="请输入商量名称或者海外商品链接"/>
+						<input type="button" id="but-search" value="搜索" />
+					</div>
+					<div class="search-link">
+						<a href="#">雅培</a>
+						<a href="#">Swisse 蔓越莓胶囊</a>
+						<a href="#">Blackmores鱼油</a>
+						<a href="#">Calvin Klein</a>
+					</div>
+				</div>
+				<div class="right">
+					<img src="images/logo2.png"/>
+				</div>
+			</div>
+		</div>
+		<!---------------------------------------search----------------------------------->
+		<div class="fixnav">
+			<div class="fixnav-1">
+			  <a href="#"></a>
+			</div>
+		
+			<div class="fixnav-2">
+				<i></i>
+				<a href="#">一<br/>键<br/>购</a>
+			</div>
+			
+			<div class="fixnav-2 fixnav-3">
+				<i class="num">0</i>
+				<i class="cart_icon"></i>
+				<a href="#">购<br/>物<br/>车</a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-4">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-5">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-6">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-7">
+			  <a href="#"></a>
+			</div>
+			
+			<p class="fixnav-1-p">我的海淘</p>
+			<p class="fixnav-1-p fixnav-1-p2">我的资产</p>
+			<p class="fixnav-1-p fixnav-1-p3">点击咨询</p>
+			<p class="fixnav-1-p fixnav-1-p4">意见反馈</p>
+			<p class="fixnav-1-p fixnav-1-p5"></p>
+		</div>
+		
+		
+		<div class="nav">
+			<div class="content">
+				<div class="nav-l">
+					<p>所有商品类目</p>
+				</div>
+				<div class="nav-c">
+					<a href="index.html">首页</a>
+					<a href="#">闪电购</a>
+					<a href="#">品牌墙</a>
+					<a href="#">新品推荐</a>
+				</div>
+				<div class="nav-r">
+					<a href="#">消费者告知书<span>|</span></a>
+					<a href="#">欧美馆</a>
+				</div>
+				<ul class="headlist">
+				<li class="headlist-li1">
+					<a href="#"><span class="headlist-icon"></span>母婴用品</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li2">
+					<a href="#"><span class="headlist-icon"></span>营养健康</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li3">
+					<a href="#"><span class="headlist-icon"></span>护肤美妆</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li4">
+					<a href="#"><span class="headlist-icon"></span>箱包鞋靴</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li5">
+					<a href="#"><span class="headlist-icon"></span>服装户外</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li6">
+					<a href="#"><span class="headlist-icon"></span>手表饰品</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li7">
+					<a href="#"><span class="headlist-icon"></span>数码家居</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+			</ul>
+				<ul class="headnews">
+					<!--<li class="headnews-li1">
+						<a href="#"><img src="images/news.jpg"/></a>
+					</li>
+					<li class="headnews-li2">
+						<p>海淘橙公告</p>
+						<a href="#">更多></a>
+					</li>
+					<li class="headnews-li3">
+						<ul>
+							<li><a href="#">>关于网站系统迁移暂停服务</a></li>
+							<li><a href="#">>关于杭州保税仓订单延误</a></li>
+							<li><a href="#">>关于快速线仅限转运一台</a></li>
+						</ul>
+					</li>-->
+				</ul>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">奶粉辅食</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">洗护日用</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">喂养日用</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">孕妇产品</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">儿童玩具</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">宝宝服饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">魅力女人</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">强键男人</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">儿童成长</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">关爱老人</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">基础营养</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">面部护肤</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+					</dl>
+					<dl>
+						<dt><a href="">时尚彩妆</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">经典香氛</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">男士专区</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">身体护理</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">美容工具</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">男鞋</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">女包</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">男包</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">配饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">服装</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外装备</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外鞋服</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">男表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">女表</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外仪表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">其他手表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">配饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">电子数码</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">生活电器</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">生活日用</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">厨房电器</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">家居家纺</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">家装软饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<!--板心-->
+			</div>
+		</div>
+		<div class="hdwraper">
+			<div class="content">
+				
+				<div class="nav-l">
+					<p></p>
+				</div>
+				
+				<div class="nav-c">
+					<a href="index.html">首页</a>
+					<a href="#">闪电购</a>
+					<a href="#">品牌墙</a>
+					<a href="#">新品推荐</a>
+				</div>
+				
+				<div class="nav-r">
+					<a href="#">消费者告知书<span>|</span></a>
+					<a href="#">欧美馆</a>
+				</div>
+				
+				<!--板心-->
+			</div>
+		</div>
+	<!---------------------------------------nav----------------------------------->
+		<div class="goodslink">
+			<div class="content">
+				<a href="#">首页></a>
+				<a href="#"> 澳洲 Swisse瑞思 蔓越莓 30粒</a>
+			</div>
+		</div>
+	<!------------------------------------goodslink------------------------------>
+		<div class="goodsimg">
+			<div class="content">
+					<div class="goodsimg-l">
+						
+						<dl>
+							<!--<dt id="smallImg">
+								<img src="images/images2/001-b1.jpg"/>
+								<div id="smallArea"></div>
+							</dt>
+							<dd><img src="images/images2/001-s1.jpg"/></dd>
+							<dd><img src="images/images2/001-s2.jpg"/></dd>
+							<dd><img src="images/images2/001-s3.jpg"/></dd>
+							<dd><img src="images/images2/001-s4.jpg"/></dd>-->
+						</dl>
+					</div>
+				
+				<div class="goodsimg-r">
+					<!--<h1><a href="#">澳洲 Swisse瑞思 蔓越莓 30粒</a></h1>
+					<h2><a href="#">Swisse</a></h2>
+						<div class="goodsimg-r-1">
+							<dl>
+								<dt>海 淘 价</dt>
+								<dd>￥72.00</dd>
+							</dl>
+							
+							<dl>
+								<dt>发货商家</dt>
+								<dd>由海淘橙发货</dd>
+							</dl>
+							
+							<dl>
+								<dt>产品剂型</dt>
+								<dd class="border">胶囊</dd>
+							</dl>
+							<dl>
+								<dt>规格</dt>
+								<dd class="border">1瓶</dd>
+							</dl>
+							<dl>
+								<dt>含量</dt>
+								<dd class="border">30粒/瓶</dd>
+							</dl>
+							<dl>
+								<dt>数量</dt>
+								<dd class="number"><span>-</span><span>0</span><span>+</span>&nbsp;&nbsp;(库存300件)</dd>
+							</dl>
+							<dl>
+								<dt>发货重量</dt>
+								<dd>150.00g</dd>
+							</dl>
+							<dl>
+								<dt>参考运费</dt>
+								<dd>包邮</dd>
+							</dl>-->
+						<!--</div>-->
+						<!--<div class="goodsimg-r-2">
+							<input type="button" value="加入购物车" />
+							<input type="button" value="加入收藏" />
+						</div>-->
+				</div>
+				
+				<div id="bigArea">
+					<!--<img src="images/images2/001-b1.jpg" id="bigImg"/>-->
+				</div>
+				
+			</div>
+		</div>
+		<!-------------------------goodsimg----------------------------------------->
+		<div class="goodsmain">
+			<div class="content">
+				<div class="goodsintor">
+					<div class="goodsintor-top">
+						<ul>
+							<li><a href="javascript:;">商品描述</a></li>
+							<li><a href="javascript:;">品牌介绍</a></li>
+							<li><a href="javascript:;">常见问题</a></li>
+							<li><a href="javascript:;">商品评价</a></li>
+						</ul>
+						<div class="goodsintor-top-2">
+							<span></span><span>手机客户端下单</span><span></span>
+							<p class="erweima"><img src="images/images2/index.png"/></p>
+						</div>
+					</div>
+					
+					<div class="goodsintor-2">
+						<img src="images/images2/proslogan1.png"/>
+					</div>
+					<div class="goodsintor-3">
+						<ul>
+							<li><img src="images/images2/goods1.jpg"/></li>
+							<li><img src="images/images2/goods2.jpg"/></li>
+							<li><img src="images/images2/goods3.jpg"/></li>
+							<li><img src="images/images2/goods4.jpg"/></li>
+							<li><img src="images/images2/goods5.jpg"/></li>
+							<li><img src="images/images2/goods6.jpg"/></li>
+							<li><img src="images/images2/goods7.jpg"/></li>
+							<li><img src="images/images2/goods8.jpg"/></li>
+							<li><img src="images/images2/goods9.jpg"/></li>
+							<li><img src="images/images2/001-b1.jpg"/></li>
+							<li><img src="images/images2/001-b2.jpg"/></li>
+							<li><img src="images/images2/001-b3.jpg"/></li>
+							<li><img src="images/images2/001-b4.jpg"/></li>
+						</ul>
+					</div>
+					<div class="goodsintor-4">
+						<a href="#"><img src="images/images2/goods14.jpg"/></a>
+						<p>[Swisse]Swisse品牌于50年代后期成立于澳大利亚的墨尔本，是澳洲自然医学疗法的先驱之一，
+							所有临床研究均在澳洲知名高等学府进行。其采用最科学的配方与最优质的原材料，所有产品均
+							经过临床认证，安全有效。该品牌在澳大利亚的口碑高于Blackmores，是澳洲当地最好的维生素
+							品牌，品质卓著，在澳大利亚联邦医药署的高强控制下，确保您能安心服用。 “以科学实现健康，
+							以成效主导市场”Swisse公司始创于本世纪50年代末成立于澳大利亚墨尔本，澳洲自然医学疗法的
+							先驱之一。所有产品原料均来源于最值得信任的供应商，并且尽一切可能使用最高质量的天然
+						</p>
+					</div>
+					
+					<div class="goodsintor-5">
+						<span></span><h2>常见问答 Q&A</h2>
+						<div class="goodsintor-5-txt">
+							<dl>
+								<dt><i>1</i> 海淘橙上买到的都是正品吗？</dt>
+								<dd>答：首先商品均采购自海外知名电子商务网站，如亚马逊等，商品来源正宗，品质有保障。
+									并且海外完善的信用体系、严谨的法治环境，以及海淘橙海外分公司背后强大的管理团队，
+									任何售假、欺诈行为都要承担触犯海外法律的严厉后果，所以在海淘橙购买海外正品就是让
+									您安心、放心。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>2</i> 海淘橙上销售的商品为什么这么便宜？</dt>
+								<dd>答：海淘橙上的商品均来源于海外合作伙伴，商品来源正宗；且海外的商业竞争充分，
+									税费都较低所以商品售价低于国内。比如，美国商品我们都是将商品发货至美国的免税州，
+									从而保证产品低价。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>3</i>  如何在海淘橙上代购？</dt>
+								<dd>答： 在海淘橙挑选喜欢的商品，下订单付款后（且不需要国际信用卡或国外的收货地址，
+									只需支付相应的人民币货款和运费）即有专业买手负责代购。 海淘橙全程监控商品资金和质量，
+									用户在收到商品后海淘橙才会将货款支付给买手，从而保障您的权益，让您海淘无忧。 在海淘上没有的商品，
+									也可以使用海淘的“分享宝贝”的功能，海淘橙审核通过后，也可以下单代购。 
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>4</i> 代购商品怎么计费？</dt>
+								<dd>答：海淘橙作为一个开放的代购平台，代购商品只收取海外网站的货款、运费和关税（部分订单可能会交付关税，
+									关税收取会提供海关的征收单据）。无其他任何隐性收费和代购费，不赚取差价。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>5</i>关税怎么算？</dt>
+								<dd>答：首先商品均采购自海外知名电子商务网站，如亚马逊等，商品来源正宗，品质有保障。
+									并且海外完善的信用体系、严谨的法治环境，以及海淘橙海外分公司背后强大的管理团队，
+									任何售假、欺诈行为都要承担触犯海外法律的严厉后果，所以在海淘橙购买海外正品就是让
+									您安心、放心。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>6</i>商品都是国外直接发过来的吗？</dt>
+								<dd>答：海淘橙上购买的商品均为从海外知名网站发货到客户手中的商品。与此同时，为了更好的服务海淘橙客户，
+									我们近期已在中国海关指定的保税区提供了保税仓发货服务。保税区的直发商品也均为海外品牌供应商的直供商品（有相应的检验检疫文件）。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>7</i>收到包裹后发现有破损的状况，能申请赔偿吗？</dt>
+								<dd>答：买家签收时，请务必先开箱检查商品，确认无误后再签收。若签收前验货时发现商品破损，
+									请保留签收的相关证据（如快递员签字说明破损，或用手机拍摄相关视频）并请在24小时内联系客服，
+									提供破损的照片和相关的证据，我们客服收到您的反馈后会第一时间为您处理。
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt><i>8</i> 为什么有的渠道需要上传身份证信息有的不需要？</dt>
+								<dd>答：不同物流渠道的通关方式不同对身份证要求不同，目前大多数直邮和保税区、美淘标准线需要提供身份证信息，
+									这些信息需要提供给海关进行清关使用，日淘线和美淘快速线则不需要身份证信息。。
+								</dd>
+							</dl>
+							
+							<span></span><h2>商品评价 review</h2>
+							暂无评价，欢迎您留言
+						</div>
+					</div>
+				</div>
+				
+				<div class="othergoods">
+					<h1>购买了此商品的用户还购买了</h1>
+					<ul class="ul1">
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods21.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲 Swisse瑞思 蔓越莓 30粒...</a>
+								<h3><span>￥</span><i>72</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods22.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">德国Salus Floradix铁元补铁补气补血抗疲劳...</a>
+								<h3><span>￥</span><i>112</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods23.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲Swisse瑞思液体叶绿素（梅子味）500ml ...</a>
+								<h3><span>￥</span><i>61.07</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods24.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲直邮 两瓶 新西兰进口Streamland新溪岛...</a>
+								<h3><span>￥</span><i>206</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods25.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲Swisse最好胶原蛋白纯天然血橙精华液 5...</a>
+								<h3><span>￥</span><i>202</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods26.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">美国GNC/健安喜 原进口浓缩大豆异黄酮 更年...</a>
+								<h3><span>￥</span><i>128</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods27.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">[澳洲直邮]澳洲Swisse瑞思 胶原蛋白液 橙子...</a>
+								<h3><span>￥</span><i>151</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods28.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲Swisse液体叶绿素口服液混合梅子口味排...</a>
+								<h3><span>￥</span><i>325</i></h3>
+							</div>
+						</li>
+						
+						<li class="lastli">
+							<div class="left">
+								<a href="#"><img src="images/images2/goods29.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲Swisse Chlorophyll Spearmint 叶绿素...</a>
+								<h3><span>￥</span><i>180</i></h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="othergoods">
+					<h1>最近浏览商品</h1>	
+					<ul class="ul2">
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods22.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">德国Salus Floradix铁元补铁补气补血抗疲劳...</a>
+								<h3><span>￥</span><i>112</i></h3>
+							</div>
+						</li>
+						
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/images2/goods24.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">澳洲直邮 两瓶 新西兰进口Streamland新溪岛...</a>
+								<h3><span>￥</span><i>206</i></h3>
+							</div>
+						</li>
+						
+						
+						<li class="lastli">
+							<div class="left">
+								<a href="#"><img src="images/images2/goods26.jpg"/></a>
+							</div>
+							<div class="right">
+								<a href="#">美国GNC/健安喜 原进口浓缩大豆异黄酮 更年...</a>
+								<h3><span>￥</span><i>128</i></h3>
+							</div>
+						</li>
+					</ul>
+				</div>	
+				
+				<div class="othergoods">
+					<h1>热搜</h1>	
+					<div class="hotgoods">
+						<a href="#">食品茶饮 |</a>
+						<a href="#">基础营养 |</a>
+						<a href="#">关爱老人 |</a>
+						<a href="#">调节内分泌 |</a>
+						<a href="#"> 孕期营养 |</a>
+						<a href="#"> 儿童成长 |</a>
+						<a href="#">强健男人 |</a>
+						<a href="#">美容养颜 |</a>
+						<a href="#">减肥瘦身 | </a>
+						<a href="#">魅力女人</a>
+					</div>
+				</div>
+				
+				<div class="othergoods">
+					<h1>品牌推荐</h1>	
+					<div class="hotgoods">
+						<a href="#">bulova |</a>
+						<a href="#">Burt's Bees |</a>
+						<a href="#">Calvin Klein | </a>
+						<a href="#">Apple | </a>
+						<a href="#"> A&F Abercrombie & Fitch | </a>
+						<a href="#"> CASIO |</a>
+						<a href="#">Columbia |</a>
+						<a href="#">Coach | </a>
+						<a href="#"> ECCO | </a>
+						<a href="#">Fisher Price |</a>
+						<a href="#"> GNC |</a>
+						<a href="#">Lancome 兰蔻 |</a>
+					</div>
+				</div>
+					
+				
+				<!--goodsmain板心-->
+			</div>
+			
+		</div>
+		
+<!-------------------------------------------goodsmain-------------------------------------->
+		<div class="otherlike">
+			<div class="otherlike-main">
+				<ul>
+					<li>
+						<p><a href="#"><img src="images/images2/goods15.jpg"/></a></p>
+						<h2><a href="#">澳洲swisse瑞思 护肝保肝片奶蓟草 解酒排毒...</a></h2>
+						<h3><span>海淘价￥</span><i>95</i><em>800.00g</em></h3>
+					</li>
+					
+					<li>
+						<p><a href="#"><img src="images/images2/goods16.jpg"/></a></p>
+						<h2><a href="#">[澳洲直邮]澳洲Swisse瑞思 葡萄籽精华 180...</a></h2>
+						<h3><span>海淘价￥</span><i>235</i><em>500.00g</em></h3>
+					</li>
+					
+					<li>
+						<p><a href="#"><img src="images/images2/goods17.jpg"/></a></p>
+						<h2><a href="#">保税区直发 澳大利亚Swisse男性复合维生素1...</a></h2>
+						<h3><span>海淘价￥</span><i>186</i><em>250.00g</em></h3>
+					</li>
+					
+					<li>
+						<p><a href="#"><img src="images/images2/goods18.jpg"/></a></p>
+						<h2><a href="#">澳洲Swisse奶蓟草护肝片肝脏排毒 改善脂肪...</a></h2>
+						<h3><span>海淘价￥</span><i>179</i><em>530.00g</em></h3>
+					</li>
+					
+					<li>
+						<p><a href="#"><img src="images/images2/goods19.jpg"/></a></p>
+						<h2><a href="#">[澳洲直邮]澳洲Swisse瑞思 钙+维生素D 150...</a></h2>
+						<h3><span>海淘价￥</span><i>160</i><em>500.00g</em></h3>
+					</li>
+					
+					<li>
+						<p><a href="#"><img src="images/images2/goods20.jpg"/></a></p>
+						<h2><a href="#">澳洲Swisse Men‘s ULTIVITE 男士复合维生...</a></h2>
+						<h3><span>海淘价￥</span><i>370</i><em>200.00g</em></h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!----------------------------------------otherlike--------------------------------->
+		
+		<div class="footer">
+		
+			<div class="footertop">
+				<div class="content">
+					<img src="images/bot_slogan.png"/>
+				</div>
+			</div>
+			
+			<div class="footercenter">
+				<div class="content">
+					<div class="footercenter-l">
+						<dl>
+							<dt><a href="#">海淘橙</a></dt>
+							<dd><a href="#">关于我们</a></dd>
+							<dd><a href="#">免费声明</a></dd>
+							<dd><a href="#">联系我们</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">能做什么</a></dt>
+							<dd><a href="#">意见建议</a></dd>
+							<dd><a href="#">海淘购物</a></dd>
+							<dd><a href="#">友情链接</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">帮助中心</a></dt>
+							<dd><a href="#">新手指南</a></dd>
+							<dd><a href="#">常见问题</a></dd>
+							<dd><a href="#">正品保证</a></dd>
+							<dd><a href="#">物流配送</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">咨讯频道</a></dt>
+							<dd><a href="#">海淘资讯</a></dd>
+							<dd><a href="#">网站公告</a></dd>
+							<dd><a href="#">地图</a></dd>
+						</dl>
+					</div>
+					
+					<div class="footercenter-c">
+						<dl>
+							<dt>微信订阅号</dt>
+							<dd>扫一扫有惊喜</dd>
+							<dd><img src="images/emw1.png"/></dd>
+						</dl>
+						<dl>
+							<dt>微信服务</dt>
+							<dd>扫一扫有惊喜</dd>
+							<dd><img src="images/ewm2.png"/></dd>
+						</dl>
+					</div>
+					
+					<div class="footercenter-r">
+						<div class="footercenter-r-1">
+							<h5>关注我们</h5>
+							<h6><span class="bg1"></span><span class="bg2"></span></h6>
+						</div>
+						<div class="footercenter-r-2">
+							<p>邮件订阅</p>
+							<input type="text" placeholder="请输入您的邮箱地址" class="ipt1"/>
+							<input type="submit" value="订阅" class="ipt2"/>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+				
+			<div class="footerbottom">
+				<div class="content">
+					Copyright 2012-2016 海淘橙 haitaocheng.com. All Rights Reserved.粤ICP备14073754号-1
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--购物车小窗口-->
+		<div class="cart">
+			
+			<div class="check">
+				<p><input type="checkbox"/><i>全选</i></p>
+				<h1><a href="cart-list.html">全屏查看</a><span></span></h1>
+			</div>
+			
+			<div class="cart-goods">
+				
+				<!--<div class="mygoods">
+					<h1>
+						<input type="checkbox"/>
+						<img src="images/goods2-3.jpg"/>
+					</h1>
+					<dl>
+						<dt>容量：10片/盒  功效：美白保湿</dt>
+						<dd id="number">1</dd>
+						<dd id="price">￥88.00</dd>
+					</dl>
+				</div>		-->
+				
+				<div class="total">
+					<div class="totalprice">
+						<p>已选<span>0</span>件</p>
+						<h2>￥<span id="totpric">0</span></h2>
+					</div>
+					<p class="warn-1">单件商品一次购买不能超过6个，否则将判定为非个人自用物品被海关退运！</p>
+					<input type="submit" value="去结算" class="go"/>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</body>
+</html>

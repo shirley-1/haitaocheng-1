@@ -1,0 +1,143 @@
+.content{
+	overflow: hidden;
+}
+
+.nav{
+	width: 100%;
+	height: 80px;
+	background: #f9f9f9;
+	padding: 20px;
+}
+.nav .nav-left{
+	width: 200px;
+	height: 80px;
+	float: left;
+}
+.nav .nav-left a{
+	display: block;
+	width: 200px;
+	height: 80px;
+	float: left;
+	background: url(../images/logo.png) no-repeat;
+}
+.nav .nav-right{
+	width: 500px;
+	height: 80px;
+	float: right;
+}
+
+.nav .nav-right ul{
+	width: 100%;
+	height: 30px;
+}
+.nav-right ul li{
+	float: left;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+.nav-right .bg{
+	width: 500px;
+	height: 30px;
+	background: url(../images/images3/orderstep_order_24.png) no-repeat 10px -55px;
+}
+.news{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    padding-left: 55px;
+    background: url(../images/images3/orderinfo_bg.png) no-repeat -30px -61px;
+}
+.title{
+	width: 100%;
+	height: 30px;
+	background: #f9f9f9;
+	padding: 20px;
+}
+.cartlist{
+	width: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+	padding: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.cartlist table{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	text-align: center;
+}
+thead,thead tr{
+	width:100%;
+	height: 40px;
+	border:1px solid #ccc;
+}
+td:nth-child(1){
+	width: 50%;
+}
+td:nth-child(2){
+	width: 25%;
+}
+td:nth-child(3){
+	width: 25%;
+}
+
+.cartlist .totalprice{
+	width: 100%;
+	height: 30px;
+	text-align: right;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #FF9000;
+}
+tbody{
+	overflow: hidden;
+}
+tbody tr{
+	height: 60px;
+	border: 1px solid #ccc;
+	line-height: 60px;
+}
+#img{
+	width: 40px;
+	height: 40px;
+	display:block;
+	float: left;
+	padding:10px;
+}
+#name{
+	float: left;
+}
+.allprice{
+	height: 100px;
+	width: 100%;
+	background: #f9f9f9;
+	padding: 20px;
+}
+.allprice a{
+	float: left;
+	font-size: 14px;
+	color: #0088cc;
+}
+.allprice-r{
+	float: right;
+	color: #333;
+}
+.allprice-r p{
+	font-size: 14px;
+}
+.allprice-r span{
+	color: #FF9000;
+	font-size: 12px;
+}
+.allprice-r input{
+	width: 125px;
+	height: 30px;
+	background: #ffca18;
+	color: #333;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 10px;
+}

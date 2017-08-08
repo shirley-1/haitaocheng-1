@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/move.js"></script>
+		<script src="js/js-lunbo.js"></script>
+		<script	src="js/all.js"></script>
+		<script	src="js/display.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/loadCart.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var temp=false;
+			loadCart();
+				//	ajax轮播图
+				$.get("json/lunbo.json",function(d){
+					var arr = d;
+					for(var i=0 ; i<arr.length ; i++){
+						var li1=$("<li><img src="+arr[i].img+"/ class=banner-li1></li>").appendTo(".banner-list")
+						var li2=$("<li class=banner-li2></li>").appendTo(".banner-list2")
+					}
+					lunbo();//轮播图
+				})
+			});
+		</script>
+		<div class="top-1">
+			<div class="content">
+				<ul class="left">
+					<li>hi,欢迎来到海淘橙</li>
+					<li><a href="login.html">[登录]</a></li>
+					<li><a href="register.html">[注册]</a></li>
+					<li class="left-4">注册有礼</li>
+				</ul>
+				<ul class="right">
+					<li class="right-1">
+						<a href="#">我的海淘</a>
+					</li>
+					<li class="right-2"><a href="#">购物车<span>0</span>件</a></li>
+					<li class="right-3"><a href="#">订阅关注</a></li>
+					<li class="right-4"><a href="#">帮助中心</a></li>
+					<li class="right-5"><a href="#">网站导航</a></li>
+					<li class="right-6"><a href="#">收藏海淘</a></li>
+					<li class="right-7">Ctrl+D</li>
+				</ul>
+				
+				<div class="top-1-weixin">
+				
+					<div class="top-1-weixin-1">
+						<ul>
+							<li><img src="images/emw1.png"/></li>
+							<li>微信订阅号</li>
+						</ul>
+						<ul>
+							<li><img src="images/ewm2.png"/></li>
+							<li>微信服务</li>
+						</ul>
+					</div>
+				
+				
+					<div class="top-1-weixin-2">
+						<h5>关注我们</h5>
+						<h6><span class="bg1"></span><span class="bg2"></span></h6>
+					</div>
+					
+					<div class="top-1-weixin-3">
+						<p>邮件订阅</p>
+						<input type="text" placeholder="请输入您的邮箱地址" class="ipt1"/>
+						<input type="submit" value="订阅" class="ipt2"/>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-------------------------------------top1----------------------------->
+		<div class="head">
+			<ul id="mylist">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">我的账户</a></li>
+				<li><a href="#">我的消息</a></li>
+				<li><a href="#">我的优惠券</a></li>
+			</ul>
+			<div class="content">
+				<a href="#" id="logo"></a>
+				<div class="center">
+					<div class="search">
+						<input type="text" id="text-search" placeholder="请输入商量名称或者海外商品链接"/>
+						<input type="button" id="but-search" value="搜索" />
+					</div>
+					<div class="search-link">
+						<a href="#">雅培</a>
+						<a href="#">Swisse 蔓越莓胶囊</a>
+						<a href="#">Blackmores鱼油</a>
+						<a href="#">Calvin Klein</a>
+					</div>
+				</div>
+				<div class="right">
+					<img src="images/logo2.png"/>
+				</div>
+			</div>
+		</div>
+		<!---------------------------------------search----------------------------------->
+		
+		<div class="fixnav">
+			<div class="fixnav-1">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-2">
+				<i></i>
+				<a href="#">一<br/>键<br/>购</a>
+			</div><br />
+			
+			<div class="fixnav-2 fixnav-3">
+				<i class="num">0</i>
+				<i class="cart_icon"></i>
+				<a href="#">购<br/>物<br/>车</a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-4">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-5">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-6">
+			  <a href="#"></a>
+			</div>
+			
+			<div class="fixnav-1 fixnav-7">
+			  <a href="#"></a>
+			</div>
+			
+			<p class="fixnav-1-p">我的海淘</p>
+			<p class="fixnav-1-p fixnav-1-p2">我的资产</p>
+			<p class="fixnav-1-p fixnav-1-p3">点击咨询</p>
+			<p class="fixnav-1-p fixnav-1-p4">意见反馈</p>
+			<p class="fixnav-1-p fixnav-1-p5"></p>
+		</div>
+		<!--右边固定栏-->
+		<div class="cart">
+			
+			<div class="check">
+				<p><input type="checkbox"/><i>全选</i></p>
+				<h1><a href="cart-list.html">全屏查看</a><span></span></h1>
+			</div>
+			
+			<div class="cart-goods">
+				
+				<!--<div class="mygoods">-->
+					<!--<h1>
+						<input type="checkbox"/>
+						<img src="images/goods2-3.jpg"/>
+					</h1>
+					<dl>
+						<dt>容量：10片/盒  功效：美白保湿</dt>
+						<dd id="number">1</dd>
+						<dd id="price">￥88.00</dd>
+					</dl>
+				</div>-->
+				
+				<!--<div class="mygoods">
+					<h1>
+						<input type="checkbox"/>
+						<img src="images/goods2-3.jpg"/>
+					</h1>
+					<dl>
+						<dt>容量：10片/盒  功效：美白保湿</dt>
+						<dd id="number">1</dd>
+						<dd id="price">￥88.00</dd>
+					</dl>
+				</div>				
+				-->
+				
+				<div class="total">
+					<div class="totalprice">
+						<p>已选<span>0</span>件</p>
+						<h2>￥<span id="totpric">00.00</span></h2>
+					</div>
+					<input type="submit" value="去结算" class="go"/>
+				</div>
+			</div>
+			
+		</div>
+		<!--购物车小窗口-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="nav">
+			<div class="content">
+				<div class="nav-l">
+					<p>所有商品类目</p>
+				</div>
+				<div class="nav-c">
+					<a href="details.html">首页</a>
+					<a href="#">闪电购</a>
+					<a href="#">品牌墙</a>
+					<a href="#">新品推荐</a>
+				</div>
+				<div class="nav-r">
+					<a href="#">消费者告知书<span>|</span></a>
+					<a href="#">欧美馆</a>
+				</div>
+				<ul class="headlist">
+				<li class="headlist-li1">
+					<a href="#"><span class="headlist-icon"></span>母婴用品</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li2">
+					<a href="#"><span class="headlist-icon"></span>营养健康</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li3">
+					<a href="#"><span class="headlist-icon"></span>护肤美妆</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li4">
+					<a href="#"><span class="headlist-icon"></span>箱包鞋靴</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li5">
+					<a href="#"><span class="headlist-icon"></span>服装户外</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li6">
+					<a href="#"><span class="headlist-icon"></span>手表饰品</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+				<li class="headlist-li7">
+					<a href="#"><span class="headlist-icon"></span>数码家居</a>
+					<p>
+						<a href="#">奶粉辅食</a>
+						<a href="#">洗护日用</a>
+						<a href="#">喂养日用</a>
+					</p>
+				</li>
+			</ul>
+				<ul class="headnews">
+					<li class="headnews-li1">
+						<a href="#"><img src="images/news.jpg"/></a>
+					</li>
+					<li class="headnews-li2">
+						<p>海淘橙公告</p>
+						<a href="#">更多></a>
+					</li>
+					<li class="headnews-li3">
+						<ul>
+							<li><a href="#">>关于网站系统迁移暂停服务</a></li>
+							<li><a href="#">>关于杭州保税仓订单延误</a></li>
+							<li><a href="#">>关于快速线仅限转运一台</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">奶粉辅食</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">洗护日用</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">喂养日用</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">孕妇产品</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">儿童玩具</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">宝宝服饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">魅力女人</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">强键男人</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">儿童成长</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">关爱老人</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">基础营养</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">面部护肤</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+					</dl>
+					<dl>
+						<dt><a href="">时尚彩妆</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">经典香氛</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">男士专区</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">身体护理</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">美容工具</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">男鞋</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">女包</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">男包</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">配饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">服装</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外装备</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外鞋服</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">男表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">女表</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">户外仪表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">其他手表</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">配饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="headlist-r">
+					<dl>
+						<dt><a href="">电子数码</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">生活电器</a></dt>
+						<dd>
+							<a href="#">洗衣粉</a>
+							<a href="#">婴儿皂</a>
+							<a href="#">洗衣液</a>
+							<a href="#">沐浴露</a>
+							<a href="#">洗发水</a>
+							<a href="#">面霜</a>
+							<a href="#">乳液</a>
+							<a href="#">洗面奶</a>
+							<a href="#">牙膏</a>
+							<a href="#">洗洁剂</a>
+							<a href="#">礼盒套装</a>
+							<a href="#">口腔护理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">生活日用</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">厨房电器</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">家居家纺</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">家装软饰</a></dt>
+						<dd>
+							<a href="#">奶粉</a>
+							<a href="#">饼干</a>
+							<a href="#">泡芙</a>
+							<a href="#">鱼肝油</a>
+							<a href="#">益生菌</a>
+							<a href="#">米粉米糊</a>
+							<a href="#">维生素</a>
+							<a href="#">麦片意面</a>
+							<a href="#">钙片</a>
+							<a href="#">牛初乳</a>
+							<a href="#">麦芽糖</a>
+							<a href="#">磨牙棒</a>
+						</dd>
+					</dl>
+				</div>
+				
+				<!--板心-->
+			</div>
+		</div>
+		<div class="hdwraper">
+			<div class="content">
+				
+				<div class="nav-l">
+					<p></p>
+				</div>
+				
+				<div class="nav-c">
+					<a href="#">首页</a>
+					<a href="#">闪电购</a>
+					<a href="#">品牌墙</a>
+					<a href="#">新品推荐</a>
+				</div>
+				
+				<div class="nav-r">
+					<a href="#">消费者告知书<span>|</span></a>
+					<a href="#">欧美馆</a>
+				</div>
+				
+				<!--板心-->
+			</div>
+		</div>
+		<!---------------------------------------nav----------------------------------->
+		<div class="banner">
+			
+			<div class="banner-box">
+				<ul class="banner-list">
+					<!--ajax动态创建li节点-->
+				</ul>
+				<ul class="banner-list2">
+					<!--ajax动态创建li节点-->
+				</ul>
+			</div>
+			
+		</div>
+		<!---------------------------------------banner----------------------------------->
+		<div class="main">
+			<div class="content">
+				<div class="main-list">
+					<h2></h2>
+					<ul>
+						<li><a href="#">推荐品牌</a></li>
+						<li><a href="#">妈妈宝贝</a></li>
+						<li><a href="#">魅力女人</a></li>
+						<li><a href="#">型男必备</a></li>
+						<li><a href="#">海外官网</a></li>
+					</ul>
+					<a href="#" class="main-list-r">更多</a>
+				</div>
+				<!---------------------------------main-list-------------------------------->
+				<div class="goodsbox">
+					<div class="goods goods1">
+						<div class="goods-l">
+							<a href="#"><img src="images/goods1.jpg"/></a>
+						</div>
+						<div class="goods-r">
+							<ul>
+								<li>
+									<a href="#"><img src="images/goods2.jpg" /></a>
+									<p><a href="#">CASIO</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods3.jpg" /></a>
+									<p><a href="#">Columbia</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods4.jpg" /></a>
+									<p><a href="#">ECCO</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods5.jpg" /></a>
+									<p><a href="#">GNC</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods13.jpg" /></a>
+									<p><a href="#">Levi'S</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods6.jpg" /></a>
+									<p><a href="#">Tommy Hilfiger</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods7.jpg" /></a>
+									<p><a href="#">Mead Johnson</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods8.jpg" /></a>
+									<p><a href="#">Estee Lauder</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods9.jpg" /></a>
+									<p><a href="#">Clarks</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods10.jpg" /></a>
+									<p><a href="#">Aptamil</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods11.jpg" /></a>
+									<p><a href="#">Arc’teryx</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods12.jpg" /></a>
+									<p><a href="#">Michael Kors</a></p>
+									<i class="addfav"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="goods">
+						<div class="goods-l">
+							<a href="#"><img src="images/goods14.jpg"/></a>
+						</div>
+						<div class="goods-r">
+							<ul>
+								<li>
+									<a href="#"><img src="images/goods15.jpg" /></a>
+									<p><a href="#">Burt's Bees</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods16.jpg" /></a>
+									<p><a href="#">Gerber</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods17.jpg" /></a>
+									<p><a href="#">Childlife</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods18.jpg" /></a>
+									<p><a href="#">Aveeno</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods19.jpg" /></a>
+									<p><a href="#">munchkin</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods20.jpg" /></a>
+									<p><a href="#">Centrum</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods21.jpg" /></a>
+									<p><a href="#">Nordic Naturals</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods22.jpg" /></a>
+									<p><a href="#">meiji</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods23.jpg" /></a>
+									<p><a href="#">Morinaga</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods24.jpg" /></a>
+									<p><a href="#">Pigeon</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods25.jpg" /></a>
+									<p><a href="#">Wakodo</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods26.jpg" /></a>
+									<p><a href="#">Nutrilon</a></p>
+									<i class="addfav"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="goods">
+						<div class="goods-l">
+							<a href="#"><img src="images/goods27.jpg"/></a>
+						</div>
+						<div class="goods-r">
+							<ul>
+								<li>
+									<a href="#"><img src="images/goods28.jpg" /></a>
+									<p><a href="#">Coach</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods29.jpg" /></a>
+									<p><a href="#">Nine West</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods30.jpg" /></a>
+									<p><a href="#">kate spade</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods31.jpg" /></a>
+									<p><a href="#">Clinique</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods32.jpg" /></a>
+									<p><a href="#">Clarks</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods33.jpg" /></a>
+									<p><a href="#">UGG</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods34.jpg" /></a>
+									<p><a href="#">Chanel</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods35.jpg" /></a>
+									<p><a href="#">KOSE</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods36.jpg" /></a>
+									<p><a href="#">Michael Kors</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods37.jpg" /></a>
+									<p><a href="#">Shiseido</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods38.jpg" /></a>
+									<p><a href="#">CD Christian Dior</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods39.jpg" /></a>
+									<p><a href="#">Lancome</a></p>
+									<i class="addfav"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="goods">
+						<div class="goods-l">
+							<a href="#"><img src="images/goods40.jpg"/></a>
+						</div>
+						<div class="goods-r">
+							<ul>
+								<li>
+									<a href="#"><img src="images/goods41.jpg" /></a>
+									<p><a href="#">Calvin Klein</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods42.jpg" /></a>
+									<p><a href="#">CASIO</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods43.jpg" /></a>
+									<p><a href="#">Columbia</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods44.jpg" /></a>
+									<p><a href="#">Levi's</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods45.jpg" /></a>
+									<p><a href="#">Philips</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods46.jpg" /></a>
+									<p><a href="#">Seiko</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods47.jpg" /></a>
+									<p><a href="#">Tommy Hilfiger</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods48.jpg" /></a>
+									<p><a href="#">Sony</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods49.jpg" /></a>
+									<p><a href="#">RalphLauren</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods50.jpg" /></a>
+									<p><a href="#">Arc’teryx</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods51.jpg" /></a>
+									<p><a href="#">Nautica</a></p>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods52.jpg" /></a>
+									<p><a href="#">U.S.POLO ASSN</a></p>
+									<i class="addfav"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="goods goodslast">
+						<div class="goods-l">
+							<a href="#"><img src="images/goods61.jpg"/></a>
+						</div>
+						<div class="goods-r">
+							<ul>
+								<li>
+									<a href="#"><img src="images/goods53.jpg" /></a>
+									<a href="">Amazon美国亚马逊</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods54.jpg" /></a>
+									<a href="">6PM</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods55.jpg" /></a>
+									<a href="">zappos</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods56.jpg" /></a>
+									<a href="">Coach蔻驰</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods57.jpg" /></a>
+									<a href="">Ralphlauren 拉夫劳伦</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods58.jpg" /></a>
+									<a href="">estee lauder 雅诗兰黛</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods59.jpg" /></a>
+									<a href="">ebags</a>
+									<i class="addfav"></i>
+								</li>
+								<li>
+									<a href="#"><img src="images/goods60.jpg" /></a>
+									<a href="">美国直邮ST015</a>
+									<i class="addfav"></i>
+								</li>
+								<li><a href="#"></a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+				<div class="goods2">
+					<div class="goods2-l">
+						<h2>
+							<a href="#"></a>
+						</h2>
+						<dl>
+							<dt><a href="#">母婴用品</a></dt>
+							<dd><a href="#">奶粉/辅食</a></dd>
+							<dd><a href="#">奶瓶/奶嘴</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">母婴用品</a></dt>
+							<dd><a href="#">奶粉/辅食</a></dd>
+							<dd><a href="#">奶瓶/奶嘴</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+							<dd><a href="#">奶瓶/奶嘴</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">母婴用品</a></dt>
+							<dd><a href="#">奶粉/辅食</a></dd>
+							<dd><a href="#">奶瓶/奶嘴</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+							<dd><a href="#">奶瓶/奶嘴</a></dd>
+							<dd><a href="#">喂养餐具</a></dd>
+							<dd><a href="#">洗护日用</a></dd>
+							<dd><a href="#">宝宝营养</a></dd>
+						</dl>
+						<dl class="lastdl">
+							<dt><a href="#">母婴用品</a></dt>
+							<dd><a href="#">奶粉/辅食</a></dd>
+						</dl>
+					</div>
+					
+					<div class="goods2-c">
+						<h2><a href="#"></a></h2>
+						<ul>
+							<li>
+								<i>1</i>
+								<!--<p><a>澳洲swisse瑞思 护肝保肝</a></p>
+								<div class="describe">
+									<div class="price">
+										<h4>海淘价:</h4>
+										<h5><span>￥</span>95.00</h5>
+									</div>
+									<a href="#"><img src="images/goods2-3.jpg"/></a>
+								</div>-->
+							</li>
+							<li>
+								<i>2</i>
+								
+							</li>
+							<li>
+								<i>3</i>
+							</li>
+							<li>
+								<i>4</i>
+							</li>
+							<li>
+								<i>5</i>
+							</li>
+							<li>
+								<i>6</i>
+							</li>
+						</ul>
+					</div>
+					<div class="goods2-r">
+						<ul>
+							<li><a href="#"><img src="images/goods2-2.jpg"/></a></li>
+							<li><a href="#"><img src="images/goods2-6.jpg"/></a></li>
+							<li><a href="#"><img src="images/goods2-10.jpg"/></a></li>
+						</ul>
+					</div>
+				</div>
+				<!---------------------------------goods2-------------------------------->
+				<div class="goods3-head">
+					<h2></h2>
+					<div class="goods3-head-r">
+						<a href="#">GNC</a>
+						<a href="#">更多>></a>
+					</div>
+				</div>
+				<div class="goods2 goods3">
+					<div class="goods2-l">
+						<dl>
+							<dt><a href="#">热门分类</a></dt>
+							<dd><a href="#">家居厨电</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#">品牌</a></dt>
+							<dd><a href="#">GNC</a></dd>
+							<dd><a href="#">Mead Johnson</a></dd>
+							<dd><a href="#">Childlife</a></dd>
+							<dd><a href="#">loreal</a></dd>
+							<dd><a href="#">Giorgio Armani</a></dd>
+							<dd><a href="#">The Body Shop</a></dd>
+							<dd><a href="#">fresh</a></dd>
+							<dd><a href="#">lee</a></dd>
+							<dd><a href="#">comotomo</a></dd>
+							<dd><a href="#">Similac</a></dd>
+							<dd><a href="#">Kirkland</a></dd>
+						</dl>
+						<dl class="lastdl">
+							<dt><a href="#">热搜</a></dt>
+							<dd><a href="#">日用百货</a></dd>
+						</dl>
+					</div>
+						
+					<div class="goods2-c goods3-c">
+						<h2><a href="#"></a></h2>
+						<ul>
+							<li>
+								<i>1</i>
+							</li>
+							<li>
+								<i>2</i>
+							</li>
+							<li>
+								<i>3</i>
+							</li>
+							<li>
+								<i>4</i>
+							</li>
+							<li>
+								<i>5</i>
+							</li>
+							<li>
+								<i>6</i>
+							</li>
+						</ul>
+					</div>
+					<div class="goods2-r">
+						<ul>
+							<li><a href="#"><img src="images/goods3-2.jpg"/></a></li>
+							<li><a href="#"><img src="images/goods3-3.jpg"/></a></li>
+							<li><a href="#"><img src="images/goods3-4.jpg"/></a></li>
+						</ul>
+					</div>
+				</div>
+				<!------------------------------------goods3---------------------------------->
+				
+				<div class="goods3-head goods4-head">
+					<h2></h2>
+				</div>
+				
+				<div class="goods2 goods4">
+					<!--切换导航条 -->
+					<ul class="goods4-list">
+						<li><a href="#">母婴用品</a></li>
+						<li><a href="#">营养健康</a></li>
+						<li><a href="#">护肤美妆</a></li>
+						<li><a href="#">箱包鞋靴</a></li>
+						<li><a href="#">服装户外</a></li>
+						<li><a href="#">手表饰品</a></li>
+						<li><a href="#">数码家居</a></li>
+					</ul>
+					<div class="goods2-l goods4-l">
+						
+						<dl>
+							<dt><a href="#">推荐品牌</a></dt>
+							<dd><a href="#">GNC</a></dd>
+							<dd><a href="#">Mead Johnson</a></dd>
+							<dd><a href="#">Childlife</a></dd>
+							<dd><a href="#">loreal</a></dd>
+						</dl>
+						<dl class="lastdl">
+							<dt><a href="#">热搜</a></dt>
+							<dd><a href="#">更多>></a></dd>
+						</dl>
+					</div>
+						
+					<div class="goods4-r">
+						<!--动态创建ul-->
+					</div>
+				</div>
+				
+			<!--板心-->	
+			</div>
+		</div>
+	<!-----------------------------------main-------------------------------->
+	<div class="footer">
+		
+		<div class="footertop">
+			<div class="content">
+				<img src="images/bot_slogan.png"/>
+			</div>
+		</div>
+		<div class="footercenter">
+			<div class="content">
+				<div class="footercenter-l">
+					<dl>
+						<dt><a href="#">海淘橙</a></dt>
+						<dd><a href="#">关于我们</a></dd>
+						<dd><a href="#">免费声明</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">能做什么</a></dt>
+						<dd><a href="#">意见建议</a></dd>
+						<dd><a href="#">海淘购物</a></dd>
+						<dd><a href="#">友情链接</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">帮助中心</a></dt>
+						<dd><a href="#">新手指南</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">正品保证</a></dd>
+						<dd><a href="#">物流配送</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">咨讯频道</a></dt>
+						<dd><a href="#">海淘资讯</a></dd>
+						<dd><a href="#">网站公告</a></dd>
+						<dd><a href="#">地图</a></dd>
+					</dl>
+				</div>
+				<div class="footercenter-c">
+					<dl>
+						<dt>微信订阅号</dt>
+						<dd>扫一扫有惊喜</dd>
+						<dd><img src="images/emw1.png"/></dd>
+					</dl>
+					<dl>
+						<dt>微信服务</dt>
+						<dd>扫一扫有惊喜</dd>
+						<dd><img src="images/ewm2.png"/></dd>
+					</dl>
+				</div>
+				<div class="footercenter-r">
+					<div class="footercenter-r-1">
+						<h5>关注我们</h5>
+						<h6><span class="bg1"></span><span class="bg2"></span></h6>
+					</div>
+					<div class="footercenter-r-2">
+						<p>邮件订阅</p>
+						<input type="text" placeholder="请输入您的邮箱地址" class="ipt1"/>
+						<input type="submit" value="订阅" class="ipt2"/>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="footerbottom">
+				<div class="content">
+					Copyright 2012-2016 海淘橙 haitaocheng.com. All Rights Reserved.粤ICP备14073754号-1
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	</body>
+</html>

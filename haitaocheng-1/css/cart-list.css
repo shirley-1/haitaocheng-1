@@ -1,0 +1,52 @@
+.allprice-r a{
+	display: block;
+	width: 125px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #333;
+	font-size: 14px;
+	font-weight: 600;
+	background: #ccc;
+}
+td:nth-child(1){
+	width: 5%;
+}
+td:nth-child(2){
+	width: 40%;
+}
+td:nth-child(3){
+	width: 25%;
+}
+td:nth-child(4){
+	width: 25%;
+	box-sizing: border-box;
+	padding-left: 90px;
+}
+td:nth-child(5){
+	width: 5%;
+}
+#del,#num,#add{
+	float: left;
+	margin: auto;
+}
+#num{
+	width: 30px;
+	height: 20px;
+	border: 1px solid #ccc;
+	line-height: 20px;
+}
+.warn{
+	position: absolute;
+	width: 330px;
+	height: 30px;
+	line-height: 30px;
+	color: red;
+	display:  none;
+}
+.detel{
+	cursor: pointer;
+}
+.nav-right .bg {
+    background: url(../images/images3/orderstep_order_24.png) no-repeat 10px -15px;
+}

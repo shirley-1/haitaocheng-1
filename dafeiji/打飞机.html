@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<!--导入游戏引擎-->
+		<script src="js-1/gameEngine.js"></script>
+		<!--导入我的飞机-->
+		<script src="js-1/myplane.js"></script>
+		<!--导入子弹-->
+		<script src="js-1/bullet.js"></script>
+		<!--导入打飞机-->
+		<script src="js-1/enemy.js"></script>
+		<!--检测碰撞-->
+		<script src="js-1/common.js"></script>
+		
+		<script src="js-1/ajax.js"></script>
+		<script>
+			//微信打飞机
+			//面向对象
+			
+			//游戏引擎gameEngine：对象
+			//我的飞机myPlane： 对象
+			//子弹Bullet： 构造函数
+			//敌机Enemy： 构造函数
+			
+			onload=function(){
+				
+				var olist=document.getElementById("list");
+				var oli=olist.getElementsByTagName("li");
+				
+				//点击移除登录页面，跳入加载页面
+				for(var i=0 ; i<oli.length; i++ ){
+					
+					oli[i].onclick=function(){//点击开始游戏
+						olist.parentNode.removeChild(olist);//移除ul节点
+						
+						myplane.fireInterval = this.value;
+						
+						gameEngine.init().start();//初始化并开始游戏	
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<ul id="list">
+				<li value="800">超级困难</li>
+				<li value="600">非常困难</li>
+				<li value="400">比较困难</li>
+				<li value="200">春哥附体</li>
+			</ul>
+		</div>
+	</body>
+</html>
